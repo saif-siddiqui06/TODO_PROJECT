@@ -1,0 +1,137 @@
+/* todo/static/css/styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    /* background-image: url('/static/todo_bg.jpg');  */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: lightcyan;
+    color: #333;
+}
+
+nav {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef;
+}
+
+.list-group-item-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.float-right {
+    margin-left: auto;
+}
+
+.checkbox {
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.checkbox:hover {
+    text-decoration: underline;
+}
+
+/* Optional: Add a subtle box shadow to the list items for depth */
+.list-group-item {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-title {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #007bff; /* Blue color, you can change this to your preferred color */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.todo-title:hover {
+    color: #0056b3; /* Darker shade of blue on hover, adjust as needed */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flip-button {
+    margin: 5px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+}
+
+.flip-button:hover {
+    transform: rotateY(180deg);
+}
+
+.table th{
+    text-align: left;
+}
+.table td {
+    text-align: left;
+}
+
+.table td:last-child {
+    text-align: right;
+}
+
+/* Optional: Add some padding to the action buttons for better spacing */
+.table td:last-child a {
+    margin-left: 3px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo-icon {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+
+.todo-title {
+    font-family:'Sacramento',cursive; /* Set the font-family to Comic Sans MS */
+    font-size: 40px; /* Adjust the font size as needed */
+    color: #ff69b4; /* Set a playful color, adjust as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+}
+

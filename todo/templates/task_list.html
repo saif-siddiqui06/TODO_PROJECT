@@ -1,0 +1,50 @@
+<!-- todo/templates/todo/task_list.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}ToDo List{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="text-center mb-4 todo-title">
+            ToDo List
+            <img class='todo2' src="{% static 'todo2.png' %}" alt="Todo Icon" class="todo-icon">
+        </h1>
+
+        <img src="{% static 'todo.png' %}" alt="Todo Icon" class="todo-icon">
+
+        <form method="post" id="todoForm" enctype='multipart/form-data'>
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="todoTitle">Todo Title:</label>
+                <input type="text" class="form-control" id="todoTitle" name="todoTitle" 
+                placeholder="✍️ Add item..." required>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary flip-button mb-3">Add Todo</button>
+            </div>
+        </form> 
+
+        <table class="table mt-4">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th class="text-right mt-4">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                    <tr>
+                        <td>{{ task.title }}</td>
+                        <td>
+                            <a href="{% url 'delete-task' task.id %}" class="btn btn-danger m-2"> <i class="fas fa-trash-alt"></i> Delete</a>
+                            <a href="update-task/{{task.id}}" class="btn btn-success"><i class="fas fa-edit"></i> Update</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+
